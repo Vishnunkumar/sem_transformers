@@ -24,20 +24,7 @@ def get_pre_encoders(preprocessor_link, encoder_link):
   return preprocessor, encoder
 
 
-def get_bert_embeddings(text, preprocessor, encoder):
-  
-  """
-  Gets the embedding of the text
-  Arguements:
-   text : input text
-   preprocessor: link for embedding to preprocess text
-   encoder: weights for embedding to encode text into tensors
-   
-  Return:
-    Encoded text 
-  """
-
-  def get_bert_embeddings(text_input, preprocessor, encoder):
+def get_bert_embeddings(text_input, preprocessor, encoder):
   
   """
   Gets the embedding of the text
