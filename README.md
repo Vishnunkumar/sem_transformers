@@ -12,6 +12,8 @@ embeds =  semantic.get_bert_embeddings("Hi how are you", pre, enc)
 # Encoding for a list of sentences
 list_words = ["great to have you back", "get the hell out", "welcome back", "Work like a mad man", "we are on fire"]
 list_df =  semantic.embed_df(list_words, pre, enc)
+
+# Phrase to be queried for
 quer_text =  semantic.preprocess_text()
 
 # Results ordered from most similar to least. 
