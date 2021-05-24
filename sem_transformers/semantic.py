@@ -1,5 +1,6 @@
 import tensorflow as tf
 import tensorflow_hub as hub
+import tensorflow_text
 from sklearn import metrics
 from sklearn.feature_extraction import text
 import pandas as pd
