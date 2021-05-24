@@ -3,6 +3,8 @@ A simple semantic search library using transformers and tensorflow hub
 
 ## sample code 
 ```
+from sem_transformers import *
+
 pre, enc =  get_pre_encoders("https://tfhub.dev/tensorflow/bert_en_uncased_preprocess/3", "https://tfhub.dev/tensorflow/small_bert/bert_en_uncased_L-2_H-128_A-2/1")
 embeds =  get_bert_embeddings("Hi how are you", pre, enc)
 list_words = ["great to have you back", "get the hell out", "welcome back", "Work like a mad man", "we are on fire"]
