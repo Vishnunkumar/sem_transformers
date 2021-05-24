@@ -1,6 +1,5 @@
 import tensorflow as tf
 import tensorflow_hub as hub
-import tensorflow_text as text 
 from sklearn import metrics
 from sklearn.feature_extraction import text
 import pandas as pd
@@ -37,11 +36,21 @@ def get_bert_embeddings(text, preprocessor, encoder):
     Encoded text 
   """
 
-  text_input = tf.keras.layers.Input(shape=(), dtype=tf.string)
-  encoder_inputs = preprocessor(text_input)
+  def get_bert_embeddings(text_input, preprocessor, encoder):
+  
+  """
+  Gets the embedding of the text
+  Arguements:
+   text : input text
+   preprocessor: link for embedding to preprocess text
+   encoder: weights for embedding to encode text into tensors
+  """
+
+  text_inp = tf.keras.layers.Input(shape=(), dtype=tf.string)
+  encoder_inputs = preprocessor(text_inp)
   outputs = encoder(encoder_inputs)
-  embedding_model = tf.keras.Model(text_input, outputs['pooled_output'])
-  sentences = tf.constant([text])
+  embedding_model = tf.keras.Model(text_inp, outputs['pooled_output'])
+  sentences = tf.constant([text_input])
   return embedding_model(sentences)
 
 def preprocess_text():
