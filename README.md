@@ -1,7 +1,13 @@
 # sem_transformers
 A simple semantic search library using transformers and tensorflow hub
 
-## sample code 
+## Installation
+
+```
+pip install sem-transformers
+```
+
+## Sample code 
 ```
 from sem_transformers import semantic
 
@@ -19,4 +25,4 @@ quer_text =  semantic.preprocess_text()
 # Results ordered from most similar to least. 
 df_f =  semantic.get_result(quer_text, list_df, pre, enc)
 ```
-- PS: This is under development, please raise an issue regarding the same. 
+- Please note: This is under development, please raise an issue regarding the same. 
