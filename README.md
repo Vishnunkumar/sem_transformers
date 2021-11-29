@@ -8,7 +8,7 @@ pip install sem-transformers
 ```
 
 ## Sample code 
-```
+```python
 from sem_transformers import semantic
 
 # please visit tf hub for information regarding preprocessors and encoders
